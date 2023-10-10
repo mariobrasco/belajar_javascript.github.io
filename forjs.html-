@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+        
+    }
+    .container{
+        height: 270px;
+        width: 290px;       
+        border-radius: 10px;
+    }
+    input{
+        background-color: gray;
+        border: 1px solid transparent;
+        color: #232D3F;
+        border-radius: 5px;
+        transition: .3s;
+        font-size: 15px;
+        width: 70px;
+    }
+    input:hover{
+        background-color: black;
+        border: 1px solid transparent;
+        color: aliceblue;
+    }
+    h2, label, button, .hasil{
+        color: black;
+    }
+    h2{
+        text-align: center;
+    }
+    .input, .peru{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .btn{
+        margin-left: 38%;
+    }
+   
+</style>
+<body>
+    <div class="container">
+        <h2>Perulangan Angka</h2>
+        <div class="input">
+            <label for="ang">Masukkan Angka : &nbsp</label>
+            <input type="number" class="angka" id="ang">
+        </div><br>
+        <div class="peru">
+            <label for="ulang">Jumlah Perulangan : &nbsp</label>
+            <input type="number" class="ul" id="ulang">
+        </div><br>
+
+        <button onclick="ulangdata()" class="btn">Submit</button><br><br>
+
+        <label class="h">Hasil : </label><br>
+        <span class="hasil" id="hasil"> </span>
+    </div>
+
+    <script>
+        function ulangdata(){
+            var angka = document.getElementById("ang").value;
+            var n = document.getElementById("ulang").value;
+            var hasil = "";
+
+            if (n <= 0){
+                alert("Masukkan jumlah perulangan lebih dari 0")
+            }
+            for (var i = 0; i < n; i++){
+                hasil += angka + "<br>";
+            }
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
