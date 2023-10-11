@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color Background</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    input{
+        padding: 1rem;
+        border: 1px solid transparent;
+        border-radius: 7px;
+        background-color: blanchedalmond;
+        font-weight: bold;
+        font-size: 17px;
+        color: goldenrod;
+        transition: .3s;
+    }
+    input:hover{
+        background-color: blueviolet;
+        color: cadetblue;
+        transition: .3s;
+    }
+    form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        font-size: 30px;
+    }
+
+</style>
+<body>
+    <h1 style="color: rgb(214, 50, 50);font-family: 'Segoe UI';">Klik radio button akan mengubah warna latar halaman web</h1><br><br><br><br><br>
+    <form>
+        <input type="button" value="Red" name="woi" onclick="document.bgColor='red'">
+        <input type="button" value="Orange" name="woi" onclick="document.bgColor='orange'">
+        <input type="button" value="Yellow" name="woi" onclick="document.bgColor='yellow'">
+        <input type="button" value="Green" name="woi" onclick="document.bgColor='green'">
+        <input type="button" value="Blue" name="woi" onclick="document.bgColor='blue'">
+        <input type="button" value="Darkblue" name="woi" onclick="document.bgColor='darkblue'">
+        <input type="button" value="Purple" name="woi" onclick="document.bgColor='purple'">
+    </form>
+</body>
+</html>
