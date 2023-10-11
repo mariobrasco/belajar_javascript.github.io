@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+        function celciusToFahrenheit(celcius){
+            return (celcius*9/5) + 32;
+        }
+        function konversi(){
+            var celcius = parseFloat(document.getElementById('celcius').value);
+            var fahrenheit = celciusToFahrenheit(celcius);
+
+            document.getElementById('hasil').innerHTML = celcius + " celsius = " + fahrenheit + " Fahrenheit";
+        }
+    </script>
+</head>
+<body>
+    <p>Masukkan Suhu Celcius <input type="number" id="celcius"></p>
+    <button onclick="konversi()">Hasil</button>
+    <p id="hasil"></p>
+
+</body>
+</html>
